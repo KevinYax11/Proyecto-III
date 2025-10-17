@@ -97,7 +97,7 @@ def get_byte_array(padded_encoded_text):
 
 def compress(input_path, output_path):
     """
-    [cite_start]Función principal para comprimir un archivo de texto. [cite: 8, 10]
+    Función principal para comprimir un archivo de texto.
     """
     global codes, reverse_mapping
     codes = {}
@@ -117,9 +117,9 @@ def compress(input_path, output_path):
 
     # Guardar el árbol de Huffman (o el mapa de códigos) y los bytes comprimidos
     with open(output_path, 'wb') as output_file:
-        pickle.dump((reverse_mapping, byte_array), output_file) # Guardamos el mapa inverso para facilitar la descompresión
+        pickle.dump((reverse_mapping, byte_array), output_file)
 
-    [cite_start]print(f"Archivo comprimido guardado en: {output_path}") # [cite: 11]
+    print(f"Archivo comprimido guardado en: {output_path}")
 
 def remove_padding(padded_encoded_text):
     """Elimina el padding del bitstring descomprimido."""

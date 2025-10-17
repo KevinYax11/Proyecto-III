@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesador de Datos Avanzado</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Procesador de Datos Avanzado</h1>
+        <p>Soluciones de compresión de alto rendimiento para flujos de trabajo eficientes.</p>
+    </header>
+
+    <main>
+        <section class="compressor-section" id="text-section">
+            <div class="section-header">
+                <span class="icon-placeholder"></span>
+                <h2>Compresión de Texto</h2>
+                <span class="algorithm-tag">Huffman</span>
+            </div>
+            <div class="controls">
+                <div class="file-input-wrapper">
+                    <input type="file" id="text-file-input" accept=".txt,.huff">
+                    <span class="file-input-label">Seleccionar archivo <strong>.txt</strong> o <strong>.huff</strong></span>
+                    <span class="file-name" id="text-file-name"></span>
+                </div>
+                <div class="button-group">
+                    <button id="compress-text-btn" class="button-primary">Comprimir</button>
+                    <button id="decompress-text-btn" class="button-secondary">Descomprimir</button>
+                </div>
+            </div>
+            <div class="result" id="text-result"></div>
+        </section>
+
+        <section class="compressor-section" id="image-section">
+            <div class="section-header">
+                <span class="icon-placeholder"></span>
+                <h2>Compresión de Imágenes</h2>
+                <span class="algorithm-tag">RLE</span>
+            </div>
+            <div class="controls">
+                <div class="file-input-wrapper">
+                    <input type="file" id="image-file-input" accept=".png,.bmp,.rle">
+                    <span class="file-input-label">Seleccionar archivo <strong>.png</strong>, <strong>.bmp</strong> o <strong>.rle</strong></span>
+                    <span class="file-name" id="image-file-name"></span>
+                </div>
+                <div class="button-group">
+                    <button id="compress-image-btn" class="button-primary">Comprimir</button>
+                    <button id="decompress-image-btn" class="button-secondary">Descomprimir</button>
+                </div>
+            </div>
+            <div class="result" id="image-result"></div>
+        </section>
+
+        <section class="compressor-section" id="audio-section">
+            <div class="section-header">
+                <span class="icon-placeholder"></span>
+                <h2>Compresión de Audio</h2>
+                <span class="algorithm-tag">Huffman/WAV</span>
+            </div>
+            <div class="controls">
+                <div class="file-input-wrapper">
+                    <input type="file" id="audio-file-input" accept=".wav,.huffaudio">
+                    <span class="file-input-label">Seleccionar archivo <strong>.wav</strong> o <strong>.huffaudio</strong></span>
+                    <span class="file-name" id="audio-file-name"></span>
+                </div>
+                <div class="button-group">
+                    <button id="compress-audio-btn" class="button-primary">Comprimir</button>
+                    <button id="decompress-audio-btn" class="button-secondary">Descomprimir</button>
+                </div>
+            </div>
+            <div class="result" id="audio-result"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desarrollado por: <strong>Kevin Miguel Yax Puác - EST1529422</strong></p>
+        <p>Proyecto 3: Estructuras de Datos II - Universidad Rafael Landívar</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

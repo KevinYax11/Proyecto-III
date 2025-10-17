@@ -1,0 +1,6 @@
+compresion compresion compresion
+datos datos datos datos
+estructuras estructuras
+huffman es un algoritmo de compresion de datos sin perdida
+este texto de prueba tiene repeticion de palabras para probar la compresion
+aaaaa bbb cc d
